@@ -13,7 +13,7 @@ jobs:
       # checkout the repo
       - uses: actions/checkout@v2
       - name: Azure Blob Storage - Download Blob
-        uses: armanrahman22/azblob-download-action@v1
+        uses: armanrahman22/azblob-download-action
         with:
           connection_string: ${{ secrets.AZURE_CONNECTIONSTRING }}
           container-name: "container1"

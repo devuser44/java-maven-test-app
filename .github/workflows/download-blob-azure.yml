@@ -1,5 +1,4 @@
 name: Download blob from Azure Blob Storage
-
 on:
   push:
     branches: [ "main" ]

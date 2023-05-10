@@ -18,5 +18,6 @@ jobs:
         connection-string: ${{ secrets.AZURE_CONNECTIONSTRING }}
         name: test1.json
         container: container1
-        -run: cat test1.json
+    - name: view file contents 
+      run: cat test1.json
   

@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # checkout the repo
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Azure Blob Storage - Download Blob
         uses: armanrahman22/azblob-download-action
         with:

@@ -19,5 +19,5 @@ jobs:
         name: test1.json
         container: container1
     - name: view file contents 
-      run: cat test1.json
+      run: ls -altr
   

@@ -1,0 +1,26 @@
+name: Download blob from Azure Blob Storage
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+         
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout the repo
+      - uses: actions/checkout@master
+      - name: Azure Blob Storage - Download Blob
+        uses: armanrahman22/azblob-download-action
+        with:
+          connection_string: ${{ secrets.AZURE_CONNECTIONSTRING }}
+          container-name: "container1"
+          blob-name: "test1.json"
+          download-path: "."
+      - name: View Output
+        run: |
+          ls -l
+          cat test1.json
